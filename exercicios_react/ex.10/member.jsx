@@ -1,5 +1,11 @@
 import React from 'react'
 
-export default props => (
-    <div>{props.name} <strong>{props.lastName}</strong></div>
-)
+const member = props => {
+    return (
+        <div>
+            {props.name} <strong>{props.lastName}</strong>
+        </div>
+    )
+}
+
+export default member

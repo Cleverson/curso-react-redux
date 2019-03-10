@@ -1,5 +1,11 @@
 import React from 'react'
 
-export default function() {
-    return <h1>Primeiro Componente!</h1>
+const component = () => {
+    return (
+        <div>
+            <h1>Primeiro Componente</h1>
+        </div>
+    )
 }
+
+export default component

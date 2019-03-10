@@ -1,5 +1,11 @@
 import React from 'react'
 
-export default props => (
-    <h1>{props.value}</h1>
-)
+const component = props => {
+    return (
+        <div>
+            <h1>{props.value}</h1>
+        </div>
+    )
+}
+
+export default component

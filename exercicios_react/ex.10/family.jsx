@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default props => (
-    <div>
-        {props.children}
-    </div>
-)
+const family = props => {
+    return <div>{props.children}</div>
+}
+
+export default family

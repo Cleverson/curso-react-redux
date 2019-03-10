@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ClassComponent extends Component {
-    
+class ClassComponent extends Component {
     constructor(props) {
         super(props)
         this.state = { value: props.initialValue }
@@ -10,7 +9,7 @@ export default class ClassComponent extends Component {
     sum(delta) {
         this.setState({ value: this.state.value + delta })
     }
-    
+
     render() {
         return (
             <div>
@@ -22,3 +21,5 @@ export default class ClassComponent extends Component {
         )
     }
 }
+
+export default ClassComponent

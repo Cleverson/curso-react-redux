@@ -9,16 +9,16 @@ import Hearder from '../common/template/header'
 import Footer from '../common/template/footer'
 
 const App = () => {
-    return (
-        <div className="wrapper">
-            <Hearder />
-            <SideBar />
-            <div className="content-wrapper">
-                <Routes />
-            </div>
-            <Footer />
-        </div>
-    )
+	return (
+		<div className="wrapper">
+			<Hearder />
+			<SideBar />
+			<div className="content-wrapper">
+				<Routes />
+			</div>
+			<Footer />
+		</div>
+	)
 }
 
 export default App

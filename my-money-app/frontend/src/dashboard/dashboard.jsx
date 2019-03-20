@@ -1,11 +1,52 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Dashboard = props => {
-    return (
-        <div>
-            <h1>Dashboard</h1>
-        </div>
-    )
+import { connect } from 'react-redux'
+
+import ContentHeader from '../common/template/contentHeader'
+import Content from '../common/template/content'
+import ValueBox from '../common/widget/valueBox'
+import Row from '../common/layout/row'
+
+class Dashboard extends Component {
+	render() {
+		const { credit, debt } = this.props.sumary
+		return (
+			<div>
+				<ContentHeader title="Dashboard" small="Versão 1.0" />
+				<Content>
+					<Row>
+						<ValueBox
+							cols="12 4"
+							color="green"
+							icon="bank"
+							value={`R$ ${credit}`}
+							text="Total de Crédito"
+						/>
+						<ValueBox
+							cols="12 4"
+							color="red"
+							icon="credit-card"
+							value={`R$ ${debt}`}
+							text="Total de Débito"
+						/>
+						<ValueBox
+							cols="12 4"
+							color="blue"
+							icon="money"
+							value={`R$ ${credit - debt}`}
+							text="Valor Consolidado"
+						/>
+					</Row>
+				</Content>
+			</div>
+		)
+	}
 }
 
-export default Dashboard
+const mapStateToProps = state => ({
+	sumary: state.dashboard.sumary
+})
+
+const mapDispatchToProps = dispach => {}
+
+export default connect(mapStateToProps)(Dashboard)

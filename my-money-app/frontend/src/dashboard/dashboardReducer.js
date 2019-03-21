@@ -1,13 +1,12 @@
-const INITIAL_STATE = {
-	sumary: { credit: 0, debt: 0 }
-}
+import { BILLING_SUMMARY_FETCHED } from './dashboardTypes'
 
-export default (state = INITIAL_STATE, action) => {
-	switch (action.type) {
-		case typeName:
-			return { ...state, ...payload }
+const INITIAL_STATE = { summary: { credit: 0, debt: 0 } }
 
-		default:
-			return state
-	}
+export default function(state = INITIAL_STATE, action) {
+    switch (action.type) {
+        case BILLING_SUMMARY_FETCHED:
+            return { ...state, summary: action.payload.data }
+        default:
+            return state
+    }
 }

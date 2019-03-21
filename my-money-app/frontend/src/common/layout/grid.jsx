@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class Grid extends Component {
-	toCssClasses(numbers) {
+	toCssClasses = numbers => {
 		const cols = numbers ? numbers.split(' ') : []
 		let classes = ''
 

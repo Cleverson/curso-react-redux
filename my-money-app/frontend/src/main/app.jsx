@@ -2,21 +2,17 @@ import React from 'react'
 
 import '../common/template/dependencies'
 
-import Routes from './routes'
-
 import SideBar from '../common/template/sideBar'
 import Hearder from '../common/template/header'
 import Footer from '../common/template/footer'
 import Messages from '../common/msg/messages'
 
-const App = () => {
+const App = props => {
     return (
         <div className="wrapper">
             <Hearder />
             <SideBar />
-            <div className="content-wrapper">
-                <Routes />
-            </div>
+            <div className="content-wrapper">{props.children}</div>
             <Footer />
             <Messages />
         </div>

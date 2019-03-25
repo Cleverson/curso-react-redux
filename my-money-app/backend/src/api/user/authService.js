@@ -52,8 +52,8 @@ const signup = (req, res, next) => {
 
 	if (!password.match(passwordRegex)) {
 		return res.status(400).send({
-			erros: [
-				'Senha precisa ter: uma letra maiúscula, uma letra minúscula, um número, um caracter especial(@#$%) e tamanho entre 6-20'
+			errors: [
+				'Senha precisar ter: uma letra maiúscula, uma letra minúscula, um número, uma caractere especial(@#$ %) e tamanho entre 6 - 20.'
 			]
 		})
 	}

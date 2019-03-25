@@ -1,10 +1,8 @@
 const mongoose = require('mongoose')
 const env = require('../.env')
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect(env.DB, {
-	useMongoClient: true
-	/* other options */
-})
+
+module.exports = mongoose.connect(env.DB, { useNewUrlParser: true })
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min =

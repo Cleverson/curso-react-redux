@@ -1,19 +1,24 @@
 import React from 'react'
+import { HashRouter } from 'react-router-dom'
+
+import Routes from './routes'
 
 import SideBar from '../common/template/sideBar'
-import Hearder from '../common/template/header'
+import Header from '../common/template/header'
 import Footer from '../common/template/footer'
 import Messages from '../common/msg/messages'
 
 const App = props => {
 	return (
-		<div className="wrapper">
-			<Hearder />
-			<SideBar />
-			<div className="content-wrapper">{props.children}</div>
-			<Footer />
-			<Messages />
-		</div>
+		<HashRouter>
+			<div className="wrapper">
+				<Header />
+				<SideBar />
+				<Routes />
+				<Footer />
+				<Messages />
+			</div>
+		</HashRouter>
 	)
 }
 

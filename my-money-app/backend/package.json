@@ -12,17 +12,17 @@
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^3.0.5",
-		"body-parser": "^1.15.2",
-		"express": "^4.14.0",
-		"express-query-int": "^1.0.1",
+		"body-parser": "^1.18.3",
+		"express": "^4.16.4",
+		"express-query-int": "^3.0.0",
 		"jsonwebtoken": "^8.5.1",
-		"lodash": "^4.17.4",
-		"mongoose": "^4.13.18",
+		"lodash": "^4.17.11",
+		"mongoose": "^5.4.19",
 		"mongoose-paginate": "^5.0.3",
-		"node-restful": "^0.2.5",
-		"pm2": "^2.1.5"
+		"node-restful": "^0.2.6",
+		"pm2": "^3.4.0"
 	},
 	"devDependencies": {
-		"nodemon": "^1.11.0"
+		"nodemon": "^1.18.10"
 	}
 }
